@@ -1,0 +1,37 @@
+.filelist, .imglist {
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+.filelist > div:first-child {
+    margin-top: 8px;
+}
+
+.imglist {
+    display: block;
+    text-align: center;
+}
+
+.imglist div {
+    float: left;
+    margin: 6px 12px 6px 0;
+}
+
+.imglist a.imglist_large {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+.imglist a.imglist_delete {
+    display: inline-block;
+    width: 100%;
+}
+
+.imglist img {
+    max-width: 100px;
+    max-height: 100px;
+}
