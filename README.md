@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist liyifei/yii2-pluploader "*"
+php composer.phar require --prefer-dist davidxu/yii2-pluploader "*"
 ```
 
 or add
 
 ```
-"liyifei/yii2-pluploader": "*"
+"davidxu/yii2-pluploader": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -29,7 +29,7 @@ Once the extension is installed, simply use it in your code by  :
 
 #### In View
 ```php
-<?=\liyifei\pluploader\PlUploaderWidget::widget([
+<?=\davidxu\pluploader\PlUploaderWidget::widget([
                                                     'uploadto' => '/weixin/upload',
                                                     'fileSizeLimit' => "512k",
                                                     'fileNumLimit' => 1,
