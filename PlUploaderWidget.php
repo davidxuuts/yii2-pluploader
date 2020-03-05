@@ -1,11 +1,11 @@
 <?php
 /**
  * Project: fanli
- * User: liyifei
+ * User: davidxu
  * Date: 16/2/14
  * Time: 22:46
  */
-namespace liyifei\pluploader;
+namespace davidxu\pluploader;
 
 use Yii;
 use yii\helpers\Html;
