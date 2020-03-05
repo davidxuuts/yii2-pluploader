@@ -1,11 +1,11 @@
 <?php
 /**
  * Project: fanli
- * User: liyifei
+ * User: davidxu
  * Date: 16/2/7
  * Time: 13:58
  */
-namespace liyifei\pluploader\uploader;
+namespace davidxu\pluploader\uploader;
 
 use Yii;
 use yii\base\InvalidArgumentException;
