@@ -33,7 +33,7 @@ class PlUploaderAction extends Action
             throw new InvalidParamException('Uploader Not Set');
         } else {
             if (!$this->uploader instanceof Uploader) {
-                throw new InvalidParamException('Uplaoder should extends \liyifei\pluploader\Uploader');
+                throw new InvalidParamException('Uplaoder should extends \davidxu\pluploader\Uploader');
             }
         }
 
