@@ -1,13 +1,13 @@
 {
-    "name": "liyifei/yii2-pluploader",
+    "name": "davidxu/yii2-pluploader",
     "description": "File uploader",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","uploader","pluploader"],
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "liyifei",
-            "email": "119422342@qq.com"
+            "name": "davidxu",
+            "email": "david.xu.uts@163.com"
         }
     ],
     "require": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "liyifei\\pluploader\\": ""
+            "davidxu\\pluploader\\": ""
         }
     }
 }
