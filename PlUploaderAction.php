@@ -1,13 +1,13 @@
 <?php
 /**
  * Project: fanli
- * User: liyifei
+ * User: davidxu
  * Date: 16/2/7
  * Time: 13:56
  */
-namespace liyifei\pluploader;
+namespace davidxu\pluploader;
 
-use liyifei\pluploader\uploader\Uploader;
+use davidxu\pluploader\uploader\Uploader;
 use Yii;
 use yii\base\Action;
 use yii\base\InvalidParamException;
