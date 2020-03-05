@@ -1,9 +1,9 @@
 <?php
 /**
- * User: liyifei
+ * User: davidxu
  * Date: 16/10/20
  */
-namespace liyifei\pluploader\uploader;
+namespace davidxu\pluploader\uploader;
 
 use OSS\Core\OssException;
 use OSS\OssClient;
