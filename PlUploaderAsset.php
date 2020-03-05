@@ -1,17 +1,17 @@
 <?php
 /**
  * Project: fanli
- * User: liyifei
+ * User: davidxu
  * Date: 16/2/7
  * Time: 14:00
  */
-namespace liyifei\pluploader;
+namespace davidxu\pluploader;
 
 use yii\web\AssetBundle;
 
 class PlUploaderAsset extends AssetBundle
 {
-    public $sourcePath = "@liyifei/pluploader/assets";
+    public $sourcePath = "@davidxu/pluploader/assets";
 
     public $js = [
         'plupload.full.min.js',
@@ -24,7 +24,7 @@ class PlUploaderAsset extends AssetBundle
     ];
 
     public $depends = [
-        'liyifei\adminlte\bundles\JqueryAsset',
-        'liyifei\adminlte\bundles\IEAsset',
+        'davidxu\adminlte\bundles\JqueryAsset',
+        'davidxu\adminlte\bundles\IEAsset',
     ];
 }
