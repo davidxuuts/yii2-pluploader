@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: leeyifiei
+ * User: davidxu
  * Date: 2018/2/27
  * Time: 下午3:17
  */
 
-namespace liyifei\pluploader\uploader;
+namespace davidxu\pluploader\uploader;
 
 use yii;
 
