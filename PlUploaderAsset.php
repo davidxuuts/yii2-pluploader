@@ -7,7 +7,9 @@
  */
 namespace davidxu\pluploader;
 
+use davidxu\pluploader\assets\CompatibilityIEAsset;
 use yii\web\AssetBundle;
+use yii\web\YiiAsset;
 
 class PlUploaderAsset extends AssetBundle
 {
@@ -24,7 +26,7 @@ class PlUploaderAsset extends AssetBundle
     ];
 
     public $depends = [
-        'davidxu\adminlte\bundles\JqueryAsset',
-        'davidxu\adminlte\bundles\IEAsset',
+        YiiAsset::class,
+        CompatibilityIEAsset::class,
     ];
 }
