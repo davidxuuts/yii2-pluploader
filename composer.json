@@ -11,6 +11,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1",
         "yiisoft/yii2": "*",
         "qiniu/php-sdk": "*",
         "aliyuncs/oss-sdk-php": "~2.0"

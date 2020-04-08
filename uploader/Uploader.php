@@ -1,17 +1,12 @@
 <?php
-/**
- * Project: fanli
- * User: davidxu
- * Date: 16/2/7
- * Time: 13:58
- */
+
 namespace davidxu\pluploader\uploader;
 
 abstract class Uploader
 {
     /**
-     * @param $src
-     * @param $dest
+     * @param string $src Uploaded file source path
+     * @param string $dest Uploaded file destination path
      * @return array(bool,string)
      */
     abstract public function save($src, $dest);

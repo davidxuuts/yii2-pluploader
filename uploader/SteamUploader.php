@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: davidxu
- * Date: 2018/2/27
- * Time: 下午3:17
- */
 
 namespace davidxu\pluploader\uploader;
 
@@ -20,7 +14,7 @@ class SteamUploader extends Uploader
     {
         $this->uploadDir = Yii::getAlias($uploadDir);
         if (!file_exists($this->uploadDir)) {
-            if (!mkdir($this->uploadDir, 0777, true)) {
+            if (!mkdir($this->uploadDir, 0755, true)) {
                 throw new yii\base\InvalidArgumentException($this->uploadDir . ' can not be created');
             }
         } else {
@@ -44,7 +38,7 @@ class SteamUploader extends Uploader
                     return [false, '', $dir . '文件已存在,创建附件保存目录失败'];
                 }
             } else {
-                @mkdir($dir, 0777, true);
+                @mkdir($dir, 0755, true);
             }
         }
         $path = rtrim($this->uploadDir, '/') . '/' . ltrim($dest, '/');

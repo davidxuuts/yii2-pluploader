@@ -1,0 +1,306 @@
+
+/*Plupload*/
+
+.plupload_wrapper{
+    position: relative;
+}
+.plupload_container {
+
+}
+
+.plupload_preview,
+.plupload_preview li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    background: #fff;
+}
+.plupload_file > *{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.plupload_file .plupload_file_thumb{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+.plupload_file .plupload_file_thumb > img{
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.plupload_file .plupload_file_name{
+    width: 100%;
+    padding: 1%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    line-height: 1;
+}
+.plupload_file .plupload_file_name span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 100%;
+    font-family: Courier New;
+}
+
+.plupload_file .plupload_file_size{
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 0 5px 5px 0;
+    background: rgba(0,142,255,.7);
+    color: #fff;
+    top: 5%;
+    font-size: 65%;
+    text-transform: uppercase;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+}
+.plupload_file .plupload_file_size:empty{
+    padding: 0;
+}
+
+.plupload_file .plupload_file_status{
+    width: 100%;
+    height: 100%;
+    padding: 0 25%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+.plupload_file .plupload_file_status .plupload_file_progress{
+    width: 100%;
+    text-align: center;
+}
+.plupload_file .plupload_file_status .plupload_file_progress .plupload_file_percent{
+    font-size: 20px;
+    text-align: center;
+    color: #2ab4c0;
+}
+
+.plupload_file .plupload_file_status .plupload_file_progress .plupload_file_mark{
+    font-size: 12px;
+    color: #ccc;
+    margin: 0 auto;
+    display: inline-block;
+}
+.plupload_file .plupload_file_status .plupload_file_progress .plupload_file_mark.plupload_file_uploading{
+    background-image: url(../images/uploading.gif);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 12px;
+    filter: alpha(opacity=30);
+    opacity: .3;
+    color: green;
+    padding-left: 20px;
+}
+
+.plupload_file .plupload_file_status .plupload_file_progress .progress {
+    border: 0;
+    box-shadow: none;
+    filter: none;
+    background: #f5f5f5;
+    border-radius: 4px;
+    height: 6px;
+    margin: 15px 0 10px;
+    overflow: hidden;
+}
+.plupload_file .plupload_file_status .plupload_file_progress .progress .progress-bar {
+    background: #2ab4c0;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    color: #fff;
+    float: left;
+    font-size: 12px;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+
+.plupload_file .plupload_file_action{
+    left: auto;
+    right: -10px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    cursor: help;
+}
+.plupload_file .plupload_file_action .plupload_action_icon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/remove.png");
+    text-indent: -9999px;
+}
+
+
+
+.plupload_file_loading > *:not(.plupload_file_status){
+    display: none !important;
+}
+
+
+/*.plupload_one*/
+.plupload_wrapper.plupload_one{
+    border: 1px dashed #ccc;
+}
+.plupload_one .plupload_container{
+    width: 100%;
+    height: 100%;
+}
+.plupload_one .plupload_preview{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.plupload_one .plupload_file {
+    width: 100%;
+    height: 100%;
+}
+
+.plupload_one .plupload-btn-browse{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #ccc;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+.plupload_one .plupload-btn-browse > *{
+    /* Hack flex box not work on some android devices like Xiaomi 2 */
+    display: block;
+    /* Avoid use margin under the flex box element */
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow:hidden;
+}
+.plupload_one .plupload-btn-browse i{
+    display: block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto 20px;
+    border: 1px solid #ccc;
+}
+.plupload_one .plupload-btn-browse i.glyphicon{
+    font-size: 20px;
+    top: 0;
+}
+.plupload_one .plupload-btn-browse i.ionicons{
+    font-size: 40px;
+    line-height: 30px;
+}
+.plupload_one .plupload-btn-browse b{
+    font-size: 16px;
+    display: block;
+    font-weight: normal;
+}
+.ionicons {
+    font-size: 40px;
+    line-height: 30px;
+}
+
+
+/*.plupload_many_thumb*/
+.plupload_wrapper.plupload_many_thumb{
+
+}
+.plupload_many_thumb .plupload_container{
+    padding: 10px 0;
+}
+.plupload_many_thumb .plupload_container .plupload-btn-browse{
+    margin: 0;
+}
+.plupload_many_thumb .plupload_container .plupload-btn-browse *{
+    font-weight: normal;
+}
+.plupload_many_thumb .plupload_container .plupload-btn-browse i{
+    font-size: 20px;
+}
+.plupload_many_thumb .plupload_preview{
+    width: 100%;
+    min-height: 106px;
+    overflow-y: auto;
+    border: 1px dashed #dcdcdc;
+}
+.plupload_many_thumb .plupload_preview:before,
+.plupload_many_thumb .plupload_preview:after{
+    display: table;
+    content: " ";
+}
+.plupload_many_thumb .plupload_preview:after {
+    clear: both;
+}
+.plupload_many_thumb .plupload_preview:empty {
+    background: #fff url(../images/empty.png) no-repeat center center / auto 50%;
+}
+
+.plupload_many_thumb .plupload_file{
+    float: left;
+    width: 120px;
+    height: 90px;
+    margin: 8px;
+    background: #fff;
+    -moz-box-shadow:1px 1px 5px rgba(0, 0, 0, .2);
+    -webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, .2);
+    box-shadow:1px 1px 5px rgba(0, 0, 0, .2);
+}
+.plupload_many_thumb .plupload_file .plupload_file_action{
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+}
+
+.plupload_many_thumb .plupload_file .plupload_file_name span{
+    font-size: 65%;
+}
+.plupload_many_thumb .plupload_file .plupload_file_status{
+    padding: 0 10%;
+}
+.plupload_many_thumb .plupload_file .plupload_file_status .plupload_file_progress .progress{
+    margin: 8px 0 5px;
+    height: 4px;
+}
+
+.plupload_many_thumb .plupload_file .plupload_file_status .plupload_file_progress .plupload_file_percent{
+    font-size: 14px;
+}
+.plupload_many_thumb .plupload_file .plupload_file_status .plupload_file_progress .plupload_file_mark{
+    font-size: 65%;
+}

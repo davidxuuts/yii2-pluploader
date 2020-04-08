@@ -1,13 +1,9 @@
 <?php
-/**
- * Project: fanli
- * User: davidxu
- * Date: 16/2/7
- * Time: 14:00
- */
+
 namespace davidxu\pluploader;
 
 use davidxu\pluploader\assets\CompatibilityIEAsset;
+use yii\bootstrap\BootstrapAsset;
 use yii\web\AssetBundle;
 use yii\web\YiiAsset;
 
@@ -17,16 +13,18 @@ class PlUploaderAsset extends AssetBundle
 
     public $js = [
         'plupload.full.min.js',
+        'plupload.custom.js',
         'i18n/zh_CN.js',
-        'plcommon.js',
+//        'plcommon.js',
     ];
 
     public $css = [
-        'plcommon.css',
+        'css/plcommon.css',
     ];
 
     public $depends = [
         YiiAsset::class,
+        BootstrapAsset::class,
         CompatibilityIEAsset::class,
     ];
 }

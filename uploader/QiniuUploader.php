@@ -1,10 +1,5 @@
 <?php
-/**
- * Project: fanli
- * User: davidxu
- * Date: 16/2/7
- * Time: 13:58
- */
+
 namespace davidxu\pluploader\uploader;
 
 use Qiniu\Auth;
@@ -20,7 +15,7 @@ class QiniuUploader extends Uploader
     public $secretkey;
 
     protected $auth;
-    protected $uploadmgr;
+    protected $uploadManager;
     protected $policy = array(
         'returnBody' => '{"name": $(fname),"size": $(fsize),"type": $(mimeType),"w": $(imageInfo.width),"h": $(imageInfo.height),"hash": $(etag)}',
     );
@@ -35,7 +30,7 @@ class QiniuUploader extends Uploader
             throw new InvalidArgumentException('Invalid configuration');
         }
         $this->auth = new Auth($this->accesskey, $this->secretkey);
-        $this->uploadmgr = new UploadManager();
+        $this->uploadManager = new UploadManager();
     }
 
     /**
@@ -46,7 +41,7 @@ class QiniuUploader extends Uploader
     function save($src, $dest)
     {
         $token = $this->auth->uploadToken($this->bucket, null, 3600, $this->policy);
-        $res = $this->uploadmgr->putFile($token, $dest, $src);
+        $res = $this->uploadManager->putFile($token, $dest, $src);
         if (!empty($res) && $res['0'] != null && $res[1] == null) {
             return [true, '文件保存成功'];
         } else {

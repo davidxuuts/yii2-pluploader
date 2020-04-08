@@ -1,10 +1,5 @@
 <?php
-/**
- * Project: fanli
- * User: davidxu
- * Date: 16/2/7
- * Time: 13:58
- */
+
 namespace davidxu\pluploader\uploader;
 
 use Yii;
@@ -19,7 +14,7 @@ class LocalUploader extends Uploader
     {
         $this->uploadDir = Yii::getAlias($uploadDir);
         if (!file_exists($this->uploadDir)) {
-            if (!mkdir($this->uploadDir, 0777, true)) {
+            if (!mkdir($this->uploadDir, 0755, true)) {
                 throw new InvalidArgumentException($this->uploadDir . ' can not be created');
             }
         } else {
@@ -34,8 +29,8 @@ class LocalUploader extends Uploader
     }
 
     /**
-     * @param $src
-     * @param $dest
+     * @param string $src Uploaded file source path
+     * @param string $dest Uploaded file destination path
      * @return array(bool,string,string)
      */
     public function save($src, $dest)

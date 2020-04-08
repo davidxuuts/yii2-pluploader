@@ -1,8 +1,5 @@
 <?php
-/**
- * User: davidxu
- * Date: 16/10/20
- */
+
 namespace davidxu\pluploader\uploader;
 
 use OSS\Core\OssException;
