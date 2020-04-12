@@ -46,6 +46,8 @@ class PlUploader extends InputWidget
     public $showUploadFiles = [];
     public $customOptions = [];
     
+    public $resize = [];
+    
     public $events = [];
     
     public $chunkSize = '4';
@@ -65,6 +67,10 @@ class PlUploader extends InputWidget
     protected $asset;
     
     public $id;
+    private $resizeOptions = [
+        'crop' => false,
+        'quality' =>100,
+    ];
     
     public function init()
     {
@@ -132,6 +138,11 @@ class PlUploader extends InputWidget
             Html::addCssClass($this->htmlOptions, 'plupload_one');
             $this->setWrapperStyle();
             $this->fileNumLimit = 1;
+        }
+        
+        // for resize
+        if (!empty($this->resize)) {
+            $this->options['resize'] = ArrayHelper::merge($this->resizeOptions, $this->resize);
         }
         
         // for preview
@@ -314,21 +325,25 @@ JS;
         if (isset($this->htmlOptions['style'])) {
             return;
         }
-        $this->htmlOptions['style'] = "width: {$this->containerSize}px; height: {$this->containerSize}px;";
+        $width = $this->containerSize;
+        $height = $this->containerSize;
+        
+//        if (isset($this->options['resize']) && !empty($resize = $this->options['resize'])) {
+//            $width = !isset($resize['width']) ?: $resize['width'];
+//            $height = !isset($resize['height']) ?: $resize['height'];
+//        }
+//
+//        if (isset($this->wrapperOptions['width'])) {
+//            $width = (int) $this->wrapperOptions['width'];
+//        }
+//        if (isset($this->wrapperOptions['height'])) {
+//            $height = (int) $this->wrapperOptions['height'];
+//        }
+        $this->htmlOptions['style'] = "width: {$width}px; height: {$height}px;";
     }
     
-//    /**
-//     * @return int the max upload size in MB
-//     */
-//    protected function getUploadMaxSize() {
-//        $upload_max_filesize = (int) (ini_get('upload_max_filesize'));
-//        $post_max_size = (int) (ini_get('post_max_size'));
-//        $memory_limit = (int) (ini_get('memory_limit'));
-//        return min($upload_max_filesize, $post_max_size, $memory_limit) . 'mb';
-//    }
-    
     /**
-     * 分块大小
+     * Chunk Size
      */
     protected function getChunkSize() {
         $chunksize = (int) $this->chunkSize;

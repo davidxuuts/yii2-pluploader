@@ -240,6 +240,8 @@ function (uploader, file, res) {
     if (res !== 'undefined') {
         let response = JSON.parse(res.response)
         let url = response.url
+        // console.log(response, url)
+        // console.log(response.url_use_db_id, response.file_id)
         let elementFile = $('#' + file.id)
         let responseElement = {$responseElement}
         if (response.url_use_db_id === true) {
